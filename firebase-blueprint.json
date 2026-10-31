@@ -1,0 +1,33 @@
+{
+  "entities": {
+    "LinkItem": {
+      "title": "LinkItem",
+      "description": "Saved shortcut links",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "url": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" },
+        "order": { "type": "number" },
+        "clicks": { "type": "number" },
+        "isPinned": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "iconType": { "type": "string" },
+        "iconUrl": { "type": "string" },
+        "customIcon": { "type": "string" }
+      },
+      "required": ["id", "url", "title", "category", "createdAt"]
+    }
+  },
+  "firestore": {
+    "links/{linkId}": {
+      "entity": "LinkItem",
+      "description": "Global links collection accessible and synchronized across all sessions"
+    }
+  }
+}

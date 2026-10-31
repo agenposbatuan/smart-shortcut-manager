@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+    --bg-deep: #05070a;
+    --accent-blue: #0ea5e9;
+    --accent-purple: #8b5cf6;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-deep);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Dot Grid Pattern */
+.bg-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+    background-size: 24px 24px;
+}
+
+/* Radial Glows */
+.glow-overlay {
+    background: radial-gradient(circle at 50% -20%, rgba(14, 165, 233, 0.15), transparent 70%),
+                radial-gradient(circle at 0% 100%, rgba(139, 92, 246, 0.1), transparent 50%);
+}
+
+.text-gradient-blue {
+    background: linear-gradient(to right, #22d3ee, #0ea5e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+    background: linear-gradient(to right, #f472b6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.glass-panel {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.2); }
+    50% { box-shadow: 0 0 40px rgba(14, 165, 233, 0.4); }
+}
+
+.glow-button {
+    animation: pulse-glow 3s infinite;
+}
+
+@keyframes status-pulse {
+    0% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7); }
+    70% { transform: scale(1.1); opacity: 0.8; box-shadow: 0 0 0 6px rgba(34, 211, 238, 0); }
+    100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(34, 211, 238, 0); }
+}
+
+.status-lamp-online {
+    animation: status-pulse 2s infinite;
+}
+
+/* Category Scroll behavior */
+.category-container {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeScaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.92) translateY(6px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-fade-scale {
+    animation: fadeScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

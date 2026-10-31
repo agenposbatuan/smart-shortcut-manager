@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Smart Shortcuts</string>
+    <string name="error_offline_title">Koneksi Internet Terputus</string>
+    <string name="error_offline_desc">Aplikasi tidak dapat terhubung ke server online. Periksa jaringan internet Anda untuk menggunakan Gemini AI dan fitur online.</string>
+    <string name="error_retry">Coba Lagi</string>
+    <string name="error_offline_mode">Jalankan Mode Lokal (Offline)</string>
+</resources>

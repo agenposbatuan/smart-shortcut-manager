@@ -1,0 +1,8 @@
+{
+  "name": "Smart Shortcut Manager 5 ( agenposbatuan@gmail.com )",
+  "description": "A minimalist, mobile-friendly link saver that uses AI to automatically categorize and describe your bookmarks, synced across devices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
